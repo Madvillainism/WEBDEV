@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Q-LEBRITA</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+        }
+        /* Tablero de juego*/
+        #game-board{
+            background-color: purple;
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+
+        }   
+
+    .snake{
+        background-color: red;
+        border: .25vmin solid white;
+    }
+
+    .food{
+        background-color: green;
+        border: .25vmin solid red;
+    }
+    </style>
+    <script>alert("MADE BY FROZONE ENTERPRISES: LA QLEBRITA")</script>
+    <script src = "game.js" defer type="module"></script>
+  </head>
+  <body>
+      <div id= "game-board" ></div> //taking advantage of CSS grid
+  </body>
+</html>
