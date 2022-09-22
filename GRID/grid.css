@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+/*.grid-container{
+    display: grid;
+    grid-template-columns: [first] auto [second] 40px;
+    grid-template-rows: [first] auto [second] 20px;
+    background-color: black;
+}*/
+
+/*container*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px repeat(8, 1fr);
+    background-color: red;
+    grid-column-gap: 10px;
+    height: 100%;
+  }
+
+/*grid elements*/
+  .first {
+      border: 2px ridge red;
+      border-radius: 10px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .first:hover{
+        color: greenyellow;
+        transform: scale(30px);
+        margin-top: 20px;
+        font-size: 20px;
+        transition-duration: 0.4s;
+    }
+
+    .item {
+        border: 2px ridge red;
+        border-radius: 10px;
+      background-color: rgb(142, 100, 219);
+      font-size: 16px;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      transition: all 0.3s ease-in-out;
+      }
+  
+      .item:hover{
+          background-color: black;
+          color: white;
+          transform: scale(30px);
+          margin-top: 20px;
+          transition-duration: 0.4s;
+      }
+
+/*grid elements classes*/
+
+.f-title{
+    font-family: 'Georgia',serif, monospace;
+    kerning: 20px;
+    text-align: center;
+}
+
+.i-title{
+    font-family: 'Cochin',serif, monospace;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*backgrounds*/
+
+.f-bg{ 
+    background-image: url(img/fire.jpg);
+    background-size: 100% 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.f-bg:hover{
+    background-blend-mode: darken;
+    background-color: grey;
+    transition-duration: 0.5s;
+}
+
+/*ADD BACKGROUNDS TO OTHER ITEMS*/
+
+    /*AREAS DESIGNADAS PARA EL CONTENIDO*/
+    .titulo{
+        grid-row:1/4;
+        grid-column:1/3;
+        background-color: orangered;
+    }
+
+ 

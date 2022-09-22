@@ -1,0 +1,89 @@
+/* Add a black background color to the top navigation */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.caja{ /*BOX SIZING TEST*/
+  width:150px;
+  padding:20px;
+  margin:20px;
+  border: 2px solid white;
+  background-color: grey;
+}
+
+.caja h1{
+  font-family: 'Tangerine', serif;
+   color:red;
+   font-size:50px;
+}
+
+body{
+    background-color: rgb(143, 67, 214);
+}
+
+.topnav {
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 0.4s;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+      border-radius: 50%;
+      transition-duration: 0.4s;
+      background-color: silver;
+      color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

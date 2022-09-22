@@ -1,0 +1,49 @@
+.grid-container {
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: repeat(4 3fr);
+    grid-template-rows: repeat(8 1fr);
+    grid-template-areas: 
+    "prueba-1 prueba-1 prueba-1"
+    "bsidebar title asidebar"
+    "bsidebar sidebar asidebar"
+    "bsidebar sidebar asidebar"
+    /*"bsidebar bsidebar bsidebar"*/
+    "footer footer footer"; 
+    }
+   
+   .grid-item { 
+   padding: 10px;
+   text-align: center;
+   border: 2px dashed black;
+   border-radius: 10px;
+   background-color: aliceblue;
+   font-size: 24px;
+   font-family: 'Courier New', Courier, monospace;
+   }
+   
+   .title{
+   grid-area: title;
+   background-color: #cc66ff;
+   }
+   
+   .sidebar {
+   grid-area: sidebar;
+   background-color: #3366ff;
+   }
+   
+   .asidebar {
+   grid-area: asidebar;
+   background-color: #ccff66;
+   }
+   
+   .footer {
+   grid-area: footer;
+   background-color: #00cc66;
+   }
+
+   .bsidebar {
+       grid-area: bsidebar;
+       background-color: #ccff66;
+   } 
+   

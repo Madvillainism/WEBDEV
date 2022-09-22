@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    font-weight: bolder;
+    padding: 2px;
+    animation: wee 2s infinite;
+    margin: 2px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+}
+
+div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/*hacer coordenadas de un circulo
+para hacer translate*/
+
+@keyframes wee{ 
+    from{
+        transform:translate(5px, 2px);
+    }
+    20%{
+        transform:translate(15px, 6px);
+
+    }
+    40%{
+        transform:translate(25px, 10px);
+
+    }
+    60%{
+        transform:translate(35px, 14px);
+    }
+    to{
+        transform:translate(50px, 20px);
+
+    }
+}
+
+li:nth-child(3){
+    animation: wee 2s infinite alternate;
+    margin: 5px;
+    color: black;
+}

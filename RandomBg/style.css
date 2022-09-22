@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 0.5s;
+}
+
+div{
+    position:relative;
+}
+
+button{
+    transition-duration: 0.5s;
+    transform: translate(-50%, 100%);
+    width: 100px;
+    height: 50px;
+    border: 2px groove red;
+    border-radius:95%;
+    transition: background 0.5s border 0.5s color 0.5s;
+}
+
+button:hover{
+    transition-duration: 0.5s;
+    background-color: black;
+    font-weight: bolder;
+    color: red;
+    border: 4px ridge white;
+}

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: blueviolet;
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px 100px;
+    grid-template-areas: 
+    "logo title title title"
+    "nav nav main side"
+    "footer footer footer footer";
+    grid-auto-rows: 200px;
+    grid-auto-columns: 2fr;
+    background:url(img/porplo.jpg);
+    background-size: 100% 100%;
+    padding: 10px;
+    gap:5px;
+    width: 80vw;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.item{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    
+    border-radius: 10px;
+    color: black;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: greenyellow;
+}
+
+.img-logo{
+    width: 160px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.list{
+    list-style:none;
+    border: 4px groove blue;
+    background-color: grey;
+    opacity: 70%;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.list li{
+    border-bottom: 2px ridge black;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    transition: all 0.4s ease-in-out;
+}
+
+.list:hover{
+    border-radius: 10px;
+    border: 8px ridge goldenrod;
+    opacity: 1;
+}
+
+.list li:hover{
+    border-bottom: 0px;
+    border-top: 2px ridge red;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.title{
+    grid-area: title;
+    background-color: brown;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: azure;
+    width: 300px;
+    background: url(img/STIV.jpg);
+    background-size: 100% 100%;
+    background-color: grey;
+    background-blend-mode: darken;
+}
+
+.main{
+    grid-area: main;
+    background-color: orangered;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.main p{
+    padding: 10px;
+}
+
+.side{
+    grid-area: side;
+    background-color: green;
+}
+
+.footer{
+    grid-area:footer;
+    background-color: yellow;
+    align-self: flex-end;
+}

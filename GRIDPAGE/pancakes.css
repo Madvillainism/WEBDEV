@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: greenyellow;
+}
+
+.bgound{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    filter: blur(1px);
+    -webkit-filter: blur(2px);
+    background-image: url("img/bgound.jpg");
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 90px 1fr 90px;
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    padding: 10px;
+    text-align: center;
+    gap: 5px;
+    z-index: 1;
+}
+
+.menu-container{
+    display: grid;
+    grid-template-columns: 160px repeat(3, 1fr);
+    height: 300px;
+    width: 800px;
+    margin: 10px;
+    grid-column-gap: 3px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stuff{
+    border: 3px inset black;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.stuff:hover{
+    margin: 10px;
+    border: 4px onset red;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.players{
+    background: url(img/STIV.jpg);
+    background-size: 100% 100%;
+    background-blend-mode: darken;
+    background-color: grey;
+}
+
+/*DO THE SAME FOR OTHER CONTENT*/
+
+.item{
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: -webkit-linear-gradient(left, white, red);
+    opacity: 90%;
+}
+
+.header h1{
+    align-self: center;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    color: white;
+    font-size: 80px;
+}
+
+.img-logo{
+    width: 120px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+    align-self: center;
+    transform: translateX(-10px);
+}
+
+.main{
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.main p{
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn{
+    border: 5px outset whitesmoke;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    align-self: center;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: red;
+    transform: translateX(10px);
+    animation: wee  0.6s infinite alternate-reverse;
+    transition: all ease-in-out;
+}
+
+@keyframes wee{
+    from{
+        border: 5px outset whitesmoke;
+        background-color: red;
+    }
+    to{
+        border: 7px inset red;
+        background-color: whitesmoke;
+    }
+}
+
+.footer{
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    background-color: greenyellow;
+    opacity: 90%;
+}

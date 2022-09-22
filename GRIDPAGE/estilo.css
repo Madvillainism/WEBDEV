@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px repeat(4, 1fr);
+    height: 100%;
+    background-color: darkred;
+    grid-column-gap: 10px;
+    padding: 10px;
+}
+
+.item-1{
+    border: 4px groove silver;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.4s ease-in-out;
+}
+
+.item-1:hover{
+    border: 6px ridge goldenrod;
+    background-color: white;
+    color: black;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+.item{
+    border: 3px ridge goldenrod;
+    border-radius: 10px;
+    color: black;
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.4s ease-in-out;
+}
+
+.item:hover{
+    border: 6px ridge rgb(149, 100, 219);
+    background-color: greenyellow;
+    color: magenta;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
