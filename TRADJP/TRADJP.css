@@ -1,0 +1,142 @@
+body {font-family:Georgia, 'Times New Roman', Times, serif;}
+
+#backgrounds {
+    height:800px;
+    width:1400px;
+    background-image: url("LILFLOWER.jpg");
+    background-repeat: repeat;
+    margin: auto;
+}
+
+.entrybox {
+    width:auto;
+    height:15px;
+    margin-top:40px;
+    margin-left: 90px;
+    padding-left: 20px;
+    font-size:large;
+    background-color: violet;
+    color:black;
+}
+
+  .button{
+    margin-left: 180px;
+    padding: 5px 5px;
+    font-size: 18;
+    border:dashed;
+    color:white;
+    background-color:#e6190a;
+    display:inline-block
+
+  }
+
+.button:hover{
+  opacity:0.1;
+  transition: ease-in 2s;
+  cursor:grab;
+}
+
+#title{
+    margin-left: 150px;
+    margin-top: 30px;
+    text-align:center;
+    color:purple;
+    text-shadow: 1px 1px red;
+    font-size: larger;
+    font-weight: bolder;
+}
+#myImg {
+  margin:auto;
+  border-radius: 4px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 80px; /* Location of the box */
+  left: 60px;
+  top: 10px;
+  width: 70%; /* Full width */
+  height: 70%; /* Full height */
+  border-style: groove;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(207, 18, 150); /* Fallback color */
+  background-color: rgba(216, 23, 158, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display:block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-dialog {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background: var(--white);
+    overflow: auto;
+    cursor: default;
+  }
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 40px;
+  font-style: italic;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 1s;
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
