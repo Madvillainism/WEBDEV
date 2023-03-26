@@ -1,6 +1,7 @@
 button {
   box-sizing: border-box;
   background-color: red;
+  color: white;
   border: 3px silver;
   border-radius: 2px;
 }
