@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./clase.component.css'],
 })
 export class ClaseComponent {
-  clase1 = 'React';
-  clase2 = 'Angular';
+  clase1 = '';
+  clase2 = ' ';
+
+  change(value: String) {}
 }

@@ -2,12 +2,20 @@
 <li>
   <ol>
     {{
-      clase1
+    <!--clase1 != "Front-end" ? "sexo" : "Javascript"-->
+
     }}
   </ol>
   <ol>
     {{
-      clase2
+      clase2.value
     }}
   </ol>
 </li>
+
+<div>
+  <label>Clase 2</label>
+  <input type="text" #clase2 (keyup)="(0)" />
+</div>
+
+<br />
