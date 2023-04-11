@@ -3,7 +3,6 @@
   <ol>
     {{
     <!--clase1 != "Front-end" ? "sexo" : "Javascript"-->
-
     }}
   </ol>
   <ol>
@@ -16,6 +15,15 @@
 <div>
   <label>Clase 2</label>
   <input type="text" #clase2 (keyup)="(0)" />
+</div>
+
+<div>
+  Inscrito: <input type="checkbox" id="registro" [checked]="userCheck" />
+</div>
+<br />
+
+<div>
+  <img alt="item" [src]="imagen" />
 </div>
 
 <br />
