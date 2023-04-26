@@ -1,13 +1,18 @@
 <h3>Frameworks y Librerias</h3>
 <li>
-  <ol>
+  <ol *ngFor="let class of clases; let indice = index">
     {{
-    <!--clase1 != "Front-end" ? "sexo" : "Javascript"-->
+      indice + " .- " + class
     }}
   </ol>
   <ol>
     {{
       clase2.value
+    }}
+  </ol>
+  <ol>
+    {{
+      exam
     }}
   </ol>
 </li>
@@ -16,14 +21,28 @@
   <label>Clase 2</label>
   <input type="text" #clase2 (keyup)="(0)" />
 </div>
+<div>
+  <label>Examenes</label>
+  <input type="text" [(ngModel)]="exam" />
+</div>
+
+<h3>{{ registerText }}</h3>
 
 <div>
-  Inscrito: <input type="checkbox" id="registro" [checked]="userCheck" />
+  Inscrito:
+  <input
+    type="radio"
+    name="nReg"
+    id="registro"
+    value="si"
+    [checked]="userCheck"
+    (click)="getUser($event)"
+  />
+</div>
+<div>
+  No inscrito:
+  <input type="radio" name="nReg" value="no" (click)="getUser($event)" />
 </div>
 <br />
-
-<div>
-  <img alt="item" [src]="imagen" />
-</div>
 
 <br />
