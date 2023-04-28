@@ -14,4 +14,12 @@ export class AppComponent {
   sumar(): void {
     this.resul = this.num1 * 1 + this.num2 * 1;
   }
+
+  restar(): void {
+    this.resul = this.num1 * 1 - this.num2 * 1;
+  }
+
+  mult(): void {
+    this.resul = this.num1 * 1 * this.num2 * 1;
+  }
 }
