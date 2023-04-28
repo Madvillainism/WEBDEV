@@ -1,0 +1,19 @@
+.html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal {
+  margin: auto;
+  width: 50%;
+}
+
+form {
+  padding-left: 30%;
+}
+
+button {
+  margin: 20px;
+}
