@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div>
+        {{ player.nombre }} {{ player.apellido }}
+        <span
+          [ngClass]="{
+            midfield:
+              player.posicion == 'MC' ||
+              player.posicion == 'MCO' ||
+              player.posicion == 'MCD' ||
+              player.posicion == 'MD' ||
+              player.posicion == 'MI',
+            attacker:
+              player.posicion == 'ST' ||
+              player.posicion == 'LW' ||
+              player.posicion == 'RW' ||
+              player.posicion == 'CF',
+            defender:
+              player.posicion == 'DFI' ||
+              player.posicion == 'DFC' ||
+              player.posicion == 'DFD',
+            keeper: player.posicion == 'PO'
+          }"
+          >{{ player.posicion }}</span
+        >
+        {{ player.dorsal }}
+      </div>
+
+      <app-skills (Skills)="addSkill($event)"> </app-skills>
+
+      <ul style="list-style: none">
+        <li *ngFor="let skill of skills">{{ skill }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

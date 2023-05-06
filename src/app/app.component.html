@@ -1,12 +1,67 @@
 <h1 style="text-align: center">Fukbolistas</h1>
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let Jugador of jugadores">
-        {{ Jugador.nombre }} {{ Jugador.apellido }} {{ Jugador.posicion }}
-        {{ Jugador.dorsal }}
+  <div class="col">
+    <h1>{{ title }}</h1>
+    <br />
+    <form class="form-group-row" style="text-align: center">
+      <div class="form-group col-md-3">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          placeholder="Pelé"
+          name="nombre"
+          id="nombre"
+          class="form-control"
+          [(ngModel)]="inputNombre"
+        />
       </div>
-    </div>
+
+      <div class="form-group col-md-3">
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          placeholder="Garrincha"
+          name="apellido"
+          id="apellido"
+          class="form-control"
+          [(ngModel)]="inputApellido"
+        />
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="posicion">Posicion"</label>
+        <input
+          type="text"
+          placeholder="DC"
+          name="posicion"
+          id="posicion"
+          class="form-control"
+          [(ngModel)]="inputPosicion"
+        />
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="dorsal">Dorsal</label>
+        <input
+          type="number"
+          placeholder="10"
+          name="dorsal"
+          id="dorsal"
+          class="form-control"
+          [(ngModel)]="inputDorsal"
+        />
+      </div>
+      <br />
+      <div class="col">
+        <button type="submit" class="btn btn-danger" (click)="addPlayer()">
+          FICHAR
+        </button>
+      </div>
+    </form>
   </div>
 </div>
+
+<br />
+
+<app-player *ngFor="let Jugador of jugadores" [player]="Jugador"></app-player>

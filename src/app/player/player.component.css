@@ -1,0 +1,32 @@
+.midfield {
+  color: red;
+  background-color: silver;
+  font-weight: bolder;
+  border: 2px groove goldenrod;
+  border-radius: 5px;
+  text-decoration: wavy;
+}
+
+.attacker {
+  color: green;
+  font-weight: bolder;
+  background-color: silver;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.defender {
+  color: blue;
+  font-weight: bolder;
+  background-color: grey;
+  border: 2px solid greenyellow;
+  border-radius: 5px;
+}
+
+.keeper {
+  color: yellow;
+  font-weight: bolder;
+  background-color: black;
+  border: 2px solid red;
+  border-radius: 5px;
+}
