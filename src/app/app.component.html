@@ -1,67 +1,18 @@
-<h1 style="text-align: center">Fukbolistas</h1>
+<nav class="navbar navbar-expand-sm bg-dark ms-auto justify-content-center">
+  <ul class="nav navbar-nav">
+    <li class="nav-item bar">
+      <a class="nav-link text-light" href="">Home</a>
+    </li>
+    <li class="nav-item bar">
+      <a class="nav-link text-light" href="/teams">Teams</a>
+    </li>
+    <li class="nav-item bar">
+      <a class="nav-link text-light" href="/dev">Dev</a>
+    </li>
+    <li class="nav-item bar">
+      <a class="nav-link text-light" href="/contact">Contact</a>
+    </li>
+  </ul>
+</nav>
 
-<div class="container">
-  <div class="col">
-    <h1>{{ title }}</h1>
-    <br />
-    <form class="form-group-row" style="text-align: center">
-      <div class="form-group col-md-3">
-        <label for="nombre">Nombre</label>
-        <input
-          type="text"
-          placeholder="Pelé"
-          name="nombre"
-          id="nombre"
-          class="form-control"
-          [(ngModel)]="inputNombre"
-        />
-      </div>
-
-      <div class="form-group col-md-3">
-        <label for="apellido">Apellido</label>
-        <input
-          type="text"
-          placeholder="Garrincha"
-          name="apellido"
-          id="apellido"
-          class="form-control"
-          [(ngModel)]="inputApellido"
-        />
-      </div>
-
-      <div class="form-group col-md-3">
-        <label for="posicion">Posicion"</label>
-        <input
-          type="text"
-          placeholder="DC"
-          name="posicion"
-          id="posicion"
-          class="form-control"
-          [(ngModel)]="inputPosicion"
-        />
-      </div>
-
-      <div class="form-group col-md-3">
-        <label for="dorsal">Dorsal</label>
-        <input
-          type="number"
-          placeholder="10"
-          name="dorsal"
-          id="dorsal"
-          class="form-control"
-          [(ngModel)]="inputDorsal"
-        />
-      </div>
-      <br />
-      <div class="col">
-        <button type="submit" class="btn btn-danger" (click)="addPlayer()">
-          FICHAR
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<br />
-
-<app-player *ngFor="let Jugador of jugadores" [player]="Jugador"></app-player>
+<router-outlet></router-outlet>

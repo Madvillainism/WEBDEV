@@ -1,0 +1,14 @@
+.bar {
+  border: none;
+  transition: all;
+  transition-duration: 1s;
+}
+
+.bar:hover {
+  border: 0.5px solid goldenrod;
+  border-radius: 2px;
+  margin: 5px;
+  background-color: blue;
+  font-size: larger;
+  transition-duration: 1s;
+}
