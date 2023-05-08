@@ -2,20 +2,32 @@ import { Component } from '@angular/core';
 import { Jugador } from '../jugador.model';
 import { ServPlayersService } from '../serv-players.service';
 import { ServicioService } from '../servicio.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   title = 'BEST FOOTBALL PLAYERS';
 
   constructor(
     private servPlayer: ServPlayersService,
     private servAdd: ServicioService
-  ) {
-    this.jugadores = this.servAdd.jugadores;
+  ) {}
+
+  ngOnInit(): void {
+    //this.jugadores = this.servAdd.jugadores;
+    this.servAdd.bringPlayer().subscribe((players) => {
+      console.log(players);
+      this.jugadores = Object.values(players);
+      this.servAdd.setPlayer(this.jugadores);
+    });
+
+    /*this.servAdd.bringPlayer().subscribe((pj) => {
+      console.log(pj);
+    });*/
   }
 
   jugadores: Jugador[] = [];

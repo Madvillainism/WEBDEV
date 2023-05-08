@@ -8,6 +8,7 @@ import { Jugador } from '../jugador.model';
 })
 export class PlayerComponent {
   @Input() player: Jugador;
+  @Input() index: number;
 
   skills = [''];
 

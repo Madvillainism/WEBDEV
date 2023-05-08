@@ -5,6 +5,7 @@
   border: 2px groove goldenrod;
   border-radius: 5px;
   text-decoration: wavy;
+  margin-left: 3px;
 }
 
 .attacker {
@@ -13,6 +14,7 @@
   background-color: silver;
   border: 2px solid black;
   border-radius: 5px;
+  margin-left: 3px;
 }
 
 .defender {
@@ -21,6 +23,7 @@
   background-color: grey;
   border: 2px solid greenyellow;
   border-radius: 5px;
+  margin-left: 3px;
 }
 
 .keeper {
@@ -29,4 +32,10 @@
   background-color: black;
   border: 2px solid red;
   border-radius: 5px;
+  margin-left: 3px;
+}
+
+.player {
+  font-weight: bold;
+  font-size: 18px;
 }

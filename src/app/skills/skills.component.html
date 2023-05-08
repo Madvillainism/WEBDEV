@@ -1,7 +1,13 @@
-<label>Skill:</label>
+<div style="margin-top: 5px">
+  <label>Skill:</label>
 
-<input type="text" #newSkill />
+  <input type="text" #newSkill />
 
-<button class="btn btn-success" (click)="addItem(newSkill.value)">
-  Añadir skill
-</button>
+  <button
+    class="btn btn-success"
+    style="margin-left: 5px"
+    (click)="addItem(newSkill.value)"
+  >
+    Añadir skill
+  </button>
+</div>

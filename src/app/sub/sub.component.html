@@ -1,10 +1,8 @@
-<h1 style="text-align: center">Fukbolistas</h1>
+<div style="text-align: center"><h1>BENCH</h1></div>
 
-<div class="container">
-  <div class="col">
-    <h1>{{ title }}</h1>
-    <br />
-    <form class="form-group-row" style="text-align: center">
+<div class="row">
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <form class="form-group" style="text-align: center; margin: 10px">
       <div class="form-group col-md-3">
         <label for="nombre">Nombre</label>
         <input
@@ -54,18 +52,18 @@
       </div>
       <br />
       <div class="col">
-        <button type="submit" class="btn btn-danger" (click)="addPlayer()">
-          FICHAR
+        <button type="button" class="btn btn-danger" (click)="updatePlayer()">
+          FIRMAR PLANILLA
         </button>
+        <!--<button
+          type="submit"
+          class="btn btn-primary"
+          style="margin-left: 4px"
+          (click)="sellPlayer()"
+        >
+          DESPEDIR
+        </button> -->
       </div>
     </form>
   </div>
 </div>
-
-<br />
-
-<app-player
-  *ngFor="let Jugador of jugadores; let i = index"
-  [player]="Jugador"
-  [index]="i"
-></app-player>

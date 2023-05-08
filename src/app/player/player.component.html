@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <div>
+      <div class="player">
         {{ player.nombre }} {{ player.apellido }}
+
         <span
           [ngClass]="{
             midfield:
@@ -25,6 +26,25 @@
           >{{ player.posicion }}</span
         >
         {{ player.dorsal }}
+        &nbsp;
+        <button class="btn btn-primary" style="margin-left: 5px">
+          <a
+            [routerLink]="['/update', index]"
+            [queryParams]="{ mode: '1' }"
+            style="color: white"
+            >Sustituir</a
+          >
+        </button>
+        &nbsp; &nbsp;
+
+        <button class="btn btn-warning" style="margin-left: 5px">
+          <a
+            [routerLink]="['/update', index]"
+            [queryParams]="{ mode: '2' }"
+            style="color: white"
+            >Vender</a
+          >
+        </button>
       </div>
 
       <app-skills (Skills)="addSkill($event)"> </app-skills>
