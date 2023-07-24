@@ -1,0 +1,23 @@
+<div class="pomodoro-timer">
+  <header class="title animated lightSpeedIn">TOMEITO</header>
+  <div class="timer">
+    {{ minutes }}{{ seconds ? ":" : "" }}{{ seconds ? seconds : "" }} Minutes
+  </div>
+  <div class="buttons">
+    <button (click)="startTimer()" class="start-button">START</button>
+    <button (click)="resetTimer()" class="reset-button">
+      <img src="../../assets/rewind.png" class="reset-img" />
+    </button>
+    <button (click)="stopTimer()" class="stop-button">STOP</button>
+  </div>
+  <div class="todo">
+    <h2>ToDo List:</h2>
+    <ul class="todolist">
+      <li *ngFor="let todo of todos" class="list-item">{{ todo }}</li>
+    </ul>
+    <div class="add-todo">
+      <input [(ngModel)]="newTodo" placeholder="Enter a new todo" />
+      <button (click)="addTodo()" class="add-button">Add</button>
+    </div>
+  </div>
+</div>
