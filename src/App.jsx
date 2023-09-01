@@ -20,6 +20,8 @@ function App() {
     return setSubmit(true);
   };
 
+  const bg1 = 'url("./src/assets/piksa.jpg")';
+
   return (
     <>
       <div className="main-container">
@@ -39,25 +41,30 @@ function App() {
             </li>
           </ul>
         </nav>
+        <a href="#contact" className="contact-scroll"><h2 className="chef-title">Be the Chef!</h2></a>
+        {/*<form className="form-box" onSubmit={setChef}>
+          <div className="name-field">
+            <label>Your name:</label>
+            <input
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+            ></input>
+          </div>
 
-        <h2 className="chef-title">Be the Chef!</h2>
+          <div className="meal-field">
+            <label>Your favorite recipe:</label>
+            <input
+              type="text"
+              placeholder="Fav Recipe"
+              onChange={(e) => setMeal(e.target.value)}
+            ></input>
+          </div>
 
-        <form className="form-box" onSubmit={setChef}>
-          {/*USAR USE REF PARA CAPTURAR LOS DATOS DEL FORM*/}
-          <label>Your name:</label>
-          <input
-            type="text"
-            placeholder="Name"
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <label>Favorite meal:</label>
-          <input
-            type="text"
-            placeholder="Fav Meal"
-            onChange={(e) => setMeal(e.target.value)}
-          ></input>
-          <button type="submit">COOK</button>
-        </form>
+          <button type="submit" className="cook">
+            COOK
+          </button>
+        </form>*/}
 
         {submit ? (
           <h3 className="user-info">
@@ -68,7 +75,46 @@ function App() {
           ""
         )}
 
-        <div className="recipe-header">
+        {mealList.map((meal) => {
+          return (
+            <>
+              <div
+                className="recipe-header"
+                style={{
+                  backgroundImage: meal.bgImage,
+                }}
+              >
+                <h1 className="recipe-title">{meal.name}</h1>
+                <article className="recipe-info">
+                  <p>
+                    <i className="fas fa-clock"></i>
+                    {meal.timeToCook}
+                  </p>
+                  <p>
+                    <i className="fas fa-user"></i>
+                    {meal.servings}
+                  </p>
+                </article>
+              </div>
+
+              <div className="recipe">
+                <h2>Ingredients</h2>
+                <ul>
+                  {meal.ingredients.map((ingredient) => {
+                    return <li key={ingredient}><p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>{ingredient}</p></li>;
+                  })}
+                </ul>
+              </div>
+            </>
+          );
+        })}
+
+        <div
+          className="recipe-header"
+          style={{
+            backgroundImage: bg1,
+          }}
+        >
           <h1 className="recipe-title">Pizza</h1>
           <article className="recipe-info">
             <p>
@@ -80,8 +126,7 @@ function App() {
           </article>
         </div>
 
-        <div>
-          <h1>Recipe for X</h1>
+        <div className="recipe">
           <h2>Ingredients</h2>
           <ul>
             <li>1 pizza base</li>
@@ -90,6 +135,15 @@ function App() {
             <li>Lots of love </li>
           </ul>
         </div>
+
+        <div className="contact" id="contact">
+          <h1>Hungry?</h1>
+          <h3>Phone: 123456789</h3>
+          <h3>Address: 1234 Main St</h3>
+        </div>
+        <footer className="footer">
+          <h2>© 2022 Azuka</h2>
+        </footer>
       </div>
     </>
   );

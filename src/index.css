@@ -1,9 +1,19 @@
 html {
+  background-color: #252525 !important;
   margin: 0;
-  background-color: #d062bc !important;
   padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 #root {
+  margin: 0;
+  width: 100%;
+}
+
+/*To avoid the default margins*/
+body{
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
