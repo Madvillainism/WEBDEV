@@ -1,6 +1,7 @@
 import "./App.scss";
 import { useRef, useState } from "react";
 import { mealList } from "./Recipes";
+import Modal from "./modal";
 
 function App() {
   //let userName = useRef();
@@ -8,6 +9,9 @@ function App() {
   const [name, setName] = useState("");
   const [meal, setMeal] = useState("");
   const [submit, setSubmit] = useState(false);
+
+  //controlador de modal
+  const [isOpen, setIsOpen] = useState(false)
 
   //funcion para imprimir en pantalla lo que envíe el form
   const setChef = (e) => {
@@ -41,7 +45,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <a href="#contact" className="contact-scroll"><h2 className="chef-title">Be the Chef!</h2></a>
+       <h2 className="chef-title"> <a href="#contact" className="contact-scroll">Be the Chef!</a></h2>
         {/*<form className="form-box" onSubmit={setChef}>
           <div className="name-field">
             <label>Your name:</label>
@@ -83,7 +87,11 @@ function App() {
                 style={{
                   backgroundImage: meal.bgImage,
                 }}
+                onClick={() => setIsOpen(true)}
               >
+
+         
+
                 <h1 className="recipe-title">{meal.name}</h1>
                 <article className="recipe-info">
                   <p>
@@ -114,7 +122,10 @@ function App() {
           style={{
             backgroundImage: bg1,
           }}
+          onClick={() => setIsOpen(true)}
+
         >
+         
           <h1 className="recipe-title">Pizza</h1>
           <article className="recipe-info">
             <p>
@@ -126,20 +137,21 @@ function App() {
           </article>
         </div>
 
+        {isOpen && <Modal setIsOpen={setIsOpen}/>}
+
         <div className="recipe">
           <h2>Ingredients</h2>
           <ul>
-            <li>1 pizza base</li>
-            <li>1 pizza sauce</li>
-            <li>1 pizza cheese</li>
-            <li>Lots of love </li>
+          <p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>Pizza stuff</p>
+          <p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>Pizza stuff</p>
+          <p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>Pizza stuff</p>
           </ul>
         </div>
 
         <div className="contact" id="contact">
           <h1>Hungry?</h1>
-          <h3>Phone: 123456789</h3>
-          <h3>Address: 1234 Main St</h3>
+          <h3><i className="fas fa-phone"></i> +58-424-6967521</h3>
+          <h3><i className="fas fa-location-dot"></i> Venezuela</h3>
         </div>
         <footer className="footer">
           <h2>© 2022 Azuka</h2>
