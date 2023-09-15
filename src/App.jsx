@@ -2,6 +2,7 @@ import "./App.scss";
 import { useRef, useState } from "react";
 import { mealList } from "./Recipes";
 import Modal from "./modal";
+import StarRating from "./starRating";
 
 function App() {
   //let userName = useRef();
@@ -11,7 +12,7 @@ function App() {
   const [submit, setSubmit] = useState(false);
 
   //controlador de modal
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   //funcion para imprimir en pantalla lo que envíe el form
   const setChef = (e) => {
@@ -45,30 +46,37 @@ function App() {
             </li>
           </ul>
         </nav>
-       <h2 className="chef-title"> <a href="#contact" className="contact-scroll">Be the Chef!</a></h2>
-        {/*<form className="form-box" onSubmit={setChef}>
-          <div className="name-field">
-            <label>Your name:</label>
-            <input
-              type="text"
-              placeholder="Name"
-              onChange={(e) => setName(e.target.value)}
-            ></input>
-          </div>
+        <h2 className="chef-title">
+          {" "}
+          <a href="#contact" className="contact-scroll">
+            Be the Chef!
+          </a>
+        </h2>
+        {
+          <form className="form-box" onSubmit={setChef}>
+            <div className="name-field">
+              <label>Your name:</label>
+              <input
+                type="text"
+                placeholder="Name"
+                onChange={(e) => setName(e.target.value)}
+              ></input>
+            </div>
 
-          <div className="meal-field">
-            <label>Your favorite recipe:</label>
-            <input
-              type="text"
-              placeholder="Fav Recipe"
-              onChange={(e) => setMeal(e.target.value)}
-            ></input>
-          </div>
+            <div className="meal-field">
+              <label>Your favorite recipe:</label>
+              <input
+                type="text"
+                placeholder="Fav Recipe"
+                onChange={(e) => setMeal(e.target.value)}
+              ></input>
+            </div>
 
-          <button type="submit" className="cook">
-            COOK
-          </button>
-        </form>*/}
+            <button type="submit" className="cook">
+              COOK
+            </button>
+          </form>
+        }
 
         {submit ? (
           <h3 className="user-info">
@@ -89,9 +97,6 @@ function App() {
                 }}
                 onClick={() => setIsOpen(true)}
               >
-
-         
-
                 <h1 className="recipe-title">{meal.name}</h1>
                 <article className="recipe-info">
                   <p>
@@ -104,14 +109,31 @@ function App() {
                   </p>
                 </article>
               </div>
-
+              <StarRating />
               <div className="recipe">
-                <h2>Ingredients</h2>
-                <ul>
-                  {meal.ingredients.map((ingredient) => {
-                    return <li key={ingredient}><p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>{ingredient}</p></li>;
-                  })}
-                </ul>
+                <article className="recipe-ingredients">
+                  <h2>Ingredients</h2>
+
+                  <ul>
+                    {meal.ingredients.map((ingredient) => {
+                      return (
+                        <>
+                          <li key={ingredient}>
+                            <p className="ingredient">
+                              <i className="fas fa-bread-slice list-icon"></i>
+                              {ingredient}
+                            </p>
+                          </li>
+                        </>
+                      );
+                    })}
+                  </ul>
+                </article>
+
+                <article className="recipe-description">
+                  <h2>Description</h2>
+                  <p>{meal.description}</p>
+                </article>
               </div>
             </>
           );
@@ -123,9 +145,7 @@ function App() {
             backgroundImage: bg1,
           }}
           onClick={() => setIsOpen(true)}
-
         >
-         
           <h1 className="recipe-title">Pizza</h1>
           <article className="recipe-info">
             <p>
@@ -137,21 +157,31 @@ function App() {
           </article>
         </div>
 
-        {isOpen && <Modal setIsOpen={setIsOpen}/>}
+        {isOpen && <Modal setIsOpen={setIsOpen} />}
 
         <div className="recipe">
           <h2>Ingredients</h2>
           <ul>
-          <p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>Pizza stuff</p>
-          <p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>Pizza stuff</p>
-          <p className="ingredient"><i className="fas fa-bread-slice list-icon"></i>Pizza stuff</p>
+            <p className="ingredient">
+              <i className="fas fa-bread-slice list-icon"></i>Pizza stuff
+            </p>
+            <p className="ingredient">
+              <i className="fas fa-bread-slice list-icon"></i>Pizza stuff
+            </p>
+            <p className="ingredient">
+              <i className="fas fa-bread-slice list-icon"></i>Pizza stuff
+            </p>
           </ul>
         </div>
 
         <div className="contact" id="contact">
           <h1>Hungry?</h1>
-          <h3><i className="fas fa-phone"></i> +58-424-6967521</h3>
-          <h3><i className="fas fa-location-dot"></i> Venezuela</h3>
+          <h3>
+            <i className="fas fa-phone"></i> +58-424-6967521
+          </h3>
+          <h3>
+            <i className="fas fa-location-dot"></i> Venezuela
+          </h3>
         </div>
         <footer className="footer">
           <h2>© 2022 Azuka</h2>

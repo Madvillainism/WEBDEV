@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.contact-scroll{
+.contact-scroll {
   text-decoration: none;
   color: #fbc02d;
 }
@@ -22,8 +22,8 @@ html {
     height: 250px;
   }
 
-  @media screen and (min-width: 1024px){
-    
+  @media screen and (min-width: 1024px) {
+    height: 350px;
   }
 
   width: 100%;
@@ -38,6 +38,10 @@ html {
   background-color: rgba($color: #6e969e, $alpha: 0.8);
   z-index: 2;
   .header-title {
+    @media screen and (min-width: 1024px) {
+      font-size: 120px;
+      text-shadow: 2px 2px #fafafa;
+    }
     color: #b52e21;
     font-kerning: 5px;
     font-weight: bolder;
@@ -69,11 +73,16 @@ html {
   }
 
   .navbar-list li {
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: 768px) {
       font-size: 24px;
       height: 40px;
     }
-    h3{
+
+    @media screen and (min-width: 1024px) {
+      font-size: 30px;
+      height: 45px;
+    }
+    h3 {
       margin: 0;
     }
     border-bottom: 2px solid #8bc34a;
@@ -95,6 +104,10 @@ html {
   @media screen and (min-width: 768px) {
     font-size: 50px;
   }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 90px;
+  }
   text-align: center;
   width: 100%;
   //color: #fbc02d;
@@ -103,20 +116,72 @@ html {
 }
 
 .form-box {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1024px) {
+    display: grid;
+  }
   margin-top: 5px;
   height: 100px;
   width: 75%;
   margin: 0 auto;
   padding: 10px;
-  display: grid;
+  display: none;
   grid-template-rows: 1fr 1fr;
 }
 
+.name-field {
+  height: 60px;
+  width: 600px;
+  margin: 0 auto;
+
+  label {
+    color: #fafafa;
+    font-size: 30px;
+  }
+
+  input {
+    background-color: #d6d6d6e7;
+    color: #32429b;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 15px;
+    height: 30px;
+    width: 300px;
+  }
+}
+
+.meal-field {
+  height: 60px;
+  width: 600px;
+  margin: 0 auto;
+
+  label {
+    color: #fafafa;
+    font-size: 30px;
+  }
+
+  input {
+    background-color: #d6d6d6e7;
+    color: #32429b;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 60px;
+    height: 40px;
+    width: 300px;
+  }
+}
+
 .cook {
-  //width: 40px;
+  @media screen and (min-width: 1024px) {
+    display: block;
+    height: 40px;
+    width: 50px;
+  }
+  width: 40px;
   border: 1px solid #d6c6d3;
   background-color: #ff6f43bb;
   color: #fafafa;
+  display: none;
   margin-top: 10px;
   transition: all 0.3s ease;
 }
@@ -165,6 +230,11 @@ html {
     height: 180px;
     background-position: 50%;
   }
+
+  @media screen and (min-width: 1024px) {
+    height: 210px;
+    background-position: 60%;
+  }
   position: relative;
   width: 100%;
   height: 150px;
@@ -190,8 +260,10 @@ html {
 }
 
 .recipe-title {
- 
-  z-index: 1;
+  @media screen and (min-width: 1024px) {
+    font-size: 90px;
+  }
+  //z-index: 1;
   position: relative;
   width: 100%;
   //height: 20px;
@@ -204,7 +276,7 @@ html {
 }
 
 .recipe-info {
-  z-index: 1;
+  //z-index: 1;
   position: relative;
   width: 70%;
   //height: 85px;
@@ -214,10 +286,16 @@ html {
     margin-left: 35px;
     margin-bottom: 10px;
   }
+  @media screen and (min-width: 1024px) {
+    margin-left: 40px;
+    margin-bottom: 15px;
+  }
   p {
     @media screen and (min-width: 768px) {
-    font-size: 35px;
-    
+      font-size: 35px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 45px;
     }
     font-weight: 450;
     font-size: 30px;
@@ -226,7 +304,7 @@ html {
 
   i {
     @media screen and (min-width: 768px) {
-    font-size: 30px;
+      font-size: 30px;
     }
     z-index: 1;
     position: relative;
@@ -238,12 +316,18 @@ html {
 
 .recipe {
   color: white;
-  width: 50%;
+  width: 100%;
   margin-left: 15px;
   text-align: left;
   margin-top: 10px;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.recipe-ingredients {
   h2 {
     @media screen and (min-width: 768px) {
       font-size: 40px;
@@ -255,26 +339,76 @@ html {
     margin-left: 7px;
   }
 
-  li{
+  li {
     list-style: none;
     width: 150px;
   }
 }
 
-.ingredient{
+.recipe-description {
+  width: 40%;
+  align-self: flex-start;
+  h2 {
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+      margin-left: 14px;
+    }
+    color: #fbc02d;
+    font-size: 36px;
+    text-align: right;
+    margin: 0;
+    margin-left: 7px;
+  }
+
+  p {
+    text-align: right;
+
+    font-size: 20px;
+  }
+}
+
+.star {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #dabd18b2;
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #f5c800;
+}
+.off {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.ingredient {
   @media screen and (min-width: 768px) {
     font-size: 32px;
     //margin-left: 14px;
   }
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.list-icon{
+.list-icon {
   margin-right: 10px;
-
-  
 }
-
 
 .contact {
   align-items: center;
@@ -286,7 +420,7 @@ html {
   background-repeat: no-repeat;
   background-position: 50% 10%;
   border-top-left-radius: 15px;
-  border-top-right-radius: 15px; 
+  border-top-right-radius: 15px;
   //box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
   color: #252525;
   display: flex;
@@ -297,18 +431,17 @@ html {
   transition: all 0.4s ease-in-out;
   width: 80%;
 
-
-  h1{
+  h1 {
     @media screen and (min-width: 768px) {
       font-size: 50px;
       //margin-left: 14px;
     }
     padding-top: 15px;
     margin: 0;
-    font-size: 40px
+    font-size: 40px;
   }
 
-  h3{
+  h3 {
     @media screen and (min-width: 768px) {
       font-size: 32px;
       //margin-left: 14px;
@@ -318,11 +451,11 @@ html {
   }
 }
 
-.contact:hover{
+.contact:hover {
   transition: all 0.4s ease-in-out;
   margin-bottom: 20px;
   transform: translateY(-5px);
-  box-shadow: 0px 10px 20px 2px rgba(219, 14, 14, 0.87);
+  box-shadow: 5px 0px 10px 0px rgba(219, 14, 14, 0.87);
 }
 
 .footer {
