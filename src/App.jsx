@@ -159,21 +159,6 @@ function App() {
 
         {isOpen && <Modal setIsOpen={setIsOpen} />}
 
-        <div className="recipe">
-          <h2>Ingredients</h2>
-          <ul>
-            <p className="ingredient">
-              <i className="fas fa-bread-slice list-icon"></i>Pizza stuff
-            </p>
-            <p className="ingredient">
-              <i className="fas fa-bread-slice list-icon"></i>Pizza stuff
-            </p>
-            <p className="ingredient">
-              <i className="fas fa-bread-slice list-icon"></i>Pizza stuff
-            </p>
-          </ul>
-        </div>
-
         <div className="contact" id="contact">
           <h1>Hungry?</h1>
           <h3>
@@ -182,6 +167,7 @@ function App() {
           <h3>
             <i className="fas fa-location-dot"></i> Venezuela
           </h3>
+          <h5 className="easter-egg">MARICO EL QUE LO LEA</h5>
         </div>
         <footer className="footer">
           <h2>© 2022 Azuka</h2>

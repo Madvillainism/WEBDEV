@@ -411,6 +411,14 @@ button {
 }
 
 .contact {
+  @media screen and (min-width: 768px) {
+    opacity: 0.9;
+    //margin-left: 14px;
+  }
+  @media screen and (min-width: 1024px) {
+    background-size: 50%;
+    //margin-left: 14px;
+  }
   align-items: center;
   //background-color: #32429b;
   background-image: url("./assets/record_52996_-removebg-preview.png");
@@ -436,6 +444,10 @@ button {
       font-size: 50px;
       //margin-left: 14px;
     }
+    @media screen and (min-width: 1024px) {
+      margin-top: 10px;
+      //margin-left: 14px;
+    }
     padding-top: 15px;
     margin: 0;
     font-size: 40px;
@@ -452,10 +464,19 @@ button {
 }
 
 .contact:hover {
+  @media screen and (min-width: 1024px) {
+    font-size: 32px;
+    //margin-left: 14px;
+    box-shadow: none;
+  }
   transition: all 0.4s ease-in-out;
   margin-bottom: 20px;
   transform: translateY(-5px);
   box-shadow: 5px 0px 10px 0px rgba(219, 14, 14, 0.87);
+}
+
+.easter-egg {
+  text-align: center;
 }
 
 .footer {
