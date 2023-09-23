@@ -38,6 +38,10 @@ html {
   background-color: rgba($color: #6e969e, $alpha: 0.8);
   z-index: 2;
   .header-title {
+    @media screen and (min-width: 768px) {
+      font-size: 100px;
+      text-shadow: 2px 2px #b636dc;
+    }
     @media screen and (min-width: 1024px) {
       font-size: 120px;
       text-shadow: 2px 2px #fafafa;
@@ -76,6 +80,7 @@ html {
     @media screen and (min-width: 768px) {
       font-size: 24px;
       height: 40px;
+      padding: 0;
     }
 
     @media screen and (min-width: 1024px) {
@@ -90,6 +95,8 @@ html {
     transform: scale(1);
     width: fit-content;
     color: white;
+    font-size: 20px;
+    padding-top: 18px;
   }
 
   .navbar-list li:hover {
@@ -108,9 +115,13 @@ html {
   @media screen and (min-width: 1024px) {
     font-size: 90px;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 120px;
+    margin-bottom: 20px;
+  }
   text-align: center;
   width: 100%;
-  //color: #fbc02d;
   font-size: 40px;
   font-kerning: 10px;
 }
@@ -121,6 +132,7 @@ html {
   }
   @media screen and (min-width: 1024px) {
     display: grid;
+    height: 200px;
   }
   margin-top: 5px;
   height: 100px;
@@ -173,9 +185,13 @@ html {
 
 .cook {
   @media screen and (min-width: 1024px) {
-    display: block;
+    display: flex;
+    justify-self: center;
+    align-items: center;
     height: 40px;
-    width: 50px;
+    width: 80px;
+    font-size: 20px;
+    border-radius: 15px;
   }
   width: 40px;
   border: 1px solid #d6c6d3;
@@ -187,7 +203,7 @@ html {
 }
 
 .cook:hover {
-  background-color: #88703d;
+  background-color: #b52e21;
 }
 
 .cook:active {
@@ -197,10 +213,12 @@ html {
 
 .user-info {
   transition: all 2s ease-in-out;
-  text-decoration: underline;
+  //text-decoration: underline;
   text-align: left;
+  color: #fafafa;
+  margin-left: 20px;
   animation: textpop 2s;
-  width: 70%;
+  width: 80%;
   padding: 15px;
 }
 
@@ -316,7 +334,10 @@ html {
 
 .recipe {
   color: white;
-  width: 100%;
+  width: 90%;
+  @media screen and (min-width: 768px) {
+    justify-content: space-evenly;
+  }
   margin-left: 15px;
   text-align: left;
   margin-top: 10px;
@@ -328,15 +349,16 @@ html {
 }
 
 .recipe-ingredients {
+  width: 50%;
   h2 {
     @media screen and (min-width: 768px) {
       font-size: 40px;
       margin-left: 14px;
     }
     color: #fbc02d;
-    font-size: 36px;
+    font-size: 26px;
     margin: 0;
-    margin-left: 7px;
+    margin-left: 10px;
   }
 
   li {
@@ -346,18 +368,19 @@ html {
 }
 
 .recipe-description {
-  width: 40%;
+  width: 50%;
   align-self: flex-start;
+
   h2 {
     @media screen and (min-width: 768px) {
       font-size: 40px;
       margin-left: 14px;
     }
     color: #fbc02d;
-    font-size: 36px;
+    font-size: 26px;
     text-align: right;
     margin: 0;
-    margin-left: 7px;
+    //margin-right: 10px;
   }
 
   p {
@@ -370,7 +393,7 @@ html {
 .star {
   margin-left: 20px;
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 10px;
   cursor: pointer;
   color: #dabd18b2;
   @media screen and (min-width: 1024px) {
@@ -420,7 +443,6 @@ button {
     //margin-left: 14px;
   }
   align-items: center;
-  //background-color: #32429b;
   background-image: url("./assets/record_52996_-removebg-preview.png");
   filter: drop-shadow(5px 5px 5px rgba(231, 224, 224, 0.733));
   opacity: 0.8;
@@ -442,6 +464,7 @@ button {
   h1 {
     @media screen and (min-width: 768px) {
       font-size: 50px;
+      padding-top: 30px;
       //margin-left: 14px;
     }
     @media screen and (min-width: 1024px) {
@@ -455,10 +478,10 @@ button {
 
   h3 {
     @media screen and (min-width: 768px) {
-      font-size: 32px;
+      font-size: 36px;
+      padding-top: 10px;
       //margin-left: 14px;
     }
-    margin-left: 15px;
     text-align: center;
   }
 }
@@ -472,7 +495,6 @@ button {
   transition: all 0.4s ease-in-out;
   margin-bottom: 20px;
   transform: translateY(-5px);
-  box-shadow: 5px 0px 10px 0px rgba(219, 14, 14, 0.87);
 }
 
 .easter-egg {

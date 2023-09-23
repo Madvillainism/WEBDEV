@@ -162,12 +162,11 @@ function App() {
         <div className="contact" id="contact">
           <h1>Hungry?</h1>
           <h3>
-            <i className="fas fa-phone"></i> +58-424-6967521
+            <i className="fas fa-phone"></i>
           </h3>
           <h3>
-            <i className="fas fa-location-dot"></i> Venezuela
+            <i className="fas fa-location"></i> 愛
           </h3>
-          <h5 className="easter-egg">MARICO EL QUE LO LEA</h5>
         </div>
         <footer className="footer">
           <h2>© 2022 Azuka</h2>
