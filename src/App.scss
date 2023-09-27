@@ -1,0 +1,93 @@
+.app-name {
+  background-color: azure;
+  border-top-left-radius: 50px;
+  border: 2px solid #252525;
+  box-shadow: 4px 2px 2px #252525;
+  position: relative;
+  left: 600px;
+  height: 30px;
+  padding: 10px;
+  width: 295px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  width: 900px;
+  height: 450px;
+  //border: 3px solid black;
+  //USAR SOMBRA PARA EL MENUS
+}
+
+.navbar-container {
+  height: 45px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #8075ff;
+  border: 3px groove #b8b8ff;
+
+  li {
+    padding: 10px;
+    border-right: 2px solid black;
+  }
+}
+
+.menu {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+}
+
+.portafolio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #8f38e5;
+  height: 340px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.kick-off {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  //padding: 10px;
+  background-color: #8f38e5;
+  height: 340px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about {
+  background-color: #8f38e5;
+  height: 180px;
+  width: 420px;
+}
+
+.contact {
+  background-color: #8f38e5;
+  height: 145px;
+  width: 420px;
+
+  //position: relative;
+  //top: 200px;
+}
