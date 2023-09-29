@@ -6,6 +6,7 @@ function App() {
   const sayHi = () => {
     alert("Get CV");
   };
+
   return (
     <div className="App">
       <div className=" justify-content-md-flex-end">
@@ -25,20 +26,26 @@ function App() {
           </Col>
         </Row>
         <Row className="menu">
-          <Col md="4" className="text-center portafolio">
+          <Col md="4" className="text-center portafolio hvr-sweep-to-bottom">
             <h2>PORTFOLIO</h2>
           </Col>
-          <Col md="4" className="text-center kick-off">
+          <Col md="4" className="text-center kick-off hvr-sweep-to-bottom">
             <h2>KICK OFF</h2>
           </Col>
-          <Col md="4" className="text-center menu-container">
-            <div className="about">
-              <h2>CLAIM YOUR PACK</h2>
-              <p>GET THE BEST OF THE BEST</p>
+          <Col md="4" className="text-center menu-container ">
+            <div className="slider hvr-sweep-to-left ">
+              <a href="#slide-1">1</a>
+              <a href="#slide-2">2</a>
+              <a href="#slide-3">3</a>
 
-              <p>ANADIR CARRUSEL</p>
+              <div className="slides hvr-sweep-to-left ">
+                <div id="slide-1 hvr-sweep-to-left">Claim your Pack</div>
+                <div id="slide-2 hvr-sweep-to-left">2</div>
+                <div id="slide-3 hvr-sweep-to-left">3</div>
+              </div>
             </div>
-            <div className="contact">
+
+            <div className="contact hvr-sweep-to-left">
               <h2>CONTACT</h2>
             </div>
           </Col>
