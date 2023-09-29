@@ -1,6 +1,7 @@
 import "./App.scss";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
+import Image from "./assets/worldcup.png";
 
 function App() {
   const sayHi = () => {
@@ -18,7 +19,7 @@ function App() {
         <Row className="justify-content-md-center">
           <Col md lg="2" className="navbar-container">
             <ul className="navbar">
-              <li>HOME</li>
+              <li className="navbar-active">HOME</li>
               <li>PLAY</li>
               <li>ABOUT</li>
               <li>CONTACT</li>
@@ -30,19 +31,23 @@ function App() {
             <h2>PORTFOLIO</h2>
           </Col>
           <Col md="4" className="text-center kick-off hvr-sweep-to-bottom">
-            <h2>KICK OFF</h2>
+            <div className="kick-off-content">
+              <h2>KICK OFF</h2>
+
+              <div className="kick-off-info">
+                <h3>LIVERPOOL</h3>
+                {/*<h4>VS</h4>*/}
+                <img src={Image}></img>
+                <h3>EVERTON</h3>
+              </div>
+            </div>
           </Col>
           <Col md="4" className="text-center menu-container ">
-            <div className="slider hvr-sweep-to-left ">
-              <a href="#slide-1">1</a>
-              <a href="#slide-2">2</a>
-              <a href="#slide-3">3</a>
+            <div className="about hvr-sweep-to-left">
+              <h2>CLAIM YOUR PACK</h2>
+              <p>GET THE BEST OF THE BEST</p>
 
-              <div className="slides hvr-sweep-to-left ">
-                <div id="slide-1 hvr-sweep-to-left">Claim your Pack</div>
-                <div id="slide-2 hvr-sweep-to-left">2</div>
-                <div id="slide-3 hvr-sweep-to-left">3</div>
-              </div>
+              <p>ANADIR CARRUSEL</p>
             </div>
 
             <div className="contact hvr-sweep-to-left">

@@ -4,7 +4,7 @@
   border: 2px solid #252525;
   box-shadow: 4px 2px 2px #252525;
   position: relative;
-  left: 600px;
+  left: 500px;
   height: 30px;
   padding: 10px;
   width: 295px;
@@ -23,12 +23,11 @@
 
 .navbar-container {
   height: 45px;
-  width: 350px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .navbar {
   list-style: none;
   text-decoration: none;
@@ -36,11 +35,25 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #8075ff;
-  border: 3px groove #b8b8ff;
-
+  margin: 0;
+  padding: 0;
   li {
     padding: 10px;
-    border-right: 2px solid black;
+    transition: all 0.3s;
+  }
+
+  li:hover {
+    transition: all 0.3s;
+
+    background-color: #b8b8ff;
+    font-weight: bolder;
+    border-bottom: 2px solid #414361;
+  }
+
+  .navbar-active {
+    background-color: #b8b8ff;
+    border-bottom: 2px solid #414361;
+    font-weight: bolder;
   }
 }
 
@@ -54,11 +67,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #8f38e5;
+  background-color: #414361;
   background-image: url("./assets/worldcup.png");
   background-size: 170%;
   background-position: 50%;
   background-repeat: no-repeat;
+  color: #f8f7ff;
   height: 340px;
   width: 200px;
   margin-right: 10px;
@@ -69,10 +83,35 @@
   flex-direction: column;
   text-align: left;
   //padding: 10px;
-  background-color: #8f38e5;
+  background-color: #414361;
+  color: #f8f7ff;
   height: 340px;
   width: 200px;
   margin-right: 10px;
+}
+
+.kick-off-content {
+  padding: 10px;
+
+  h2 {
+    position: relative;
+    color: #f8f7ff;
+    bottom: 20px;
+  }
+}
+
+.kick-off-info {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f8f7ff;
+  img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
 }
 
 .menu-container {
@@ -82,14 +121,16 @@
 }
 
 .about {
-  background-color: #8f38e5;
-  height: 180px;
+  background-color: #414361;
+  color: #f8f7ff;
+  height: 230px;
   width: 420px;
 }
 
 .contact {
-  background-color: #8f38e5;
-  height: 145px;
+  background-color: #414361;
+  color: #f8f7ff;
+  height: 100px;
   width: 420px;
 
   //position: relative;
@@ -117,7 +158,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to left, #d1bc20 0%, #8f38e5 100%);
+  background-image: linear-gradient(to left, #8075ff 0%, #8f38e5 100%);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -132,13 +173,14 @@
 .hvr-sweep-to-left:hover,
 .hvr-sweep-to-left:focus,
 .hvr-sweep-to-left:active {
-  color: white;
+  color: #414361;
 }
 .hvr-sweep-to-left:hover:before,
 .hvr-sweep-to-left:focus:before,
 .hvr-sweep-to-left:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+  transition-duration: 0.4s;
 }
 
 /* Sweep To Bottom */
@@ -153,6 +195,7 @@
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  transition: all 0.3s;
 }
 .hvr-sweep-to-bottom:before {
   content: "";
@@ -162,7 +205,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom, #d1bc20 0%, #8f38e5 100%);
+  background-image: linear-gradient(to bottom, #8075ff 0%, #8f38e5 100%);
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 0;
@@ -173,17 +216,22 @@
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
+  transition: all 0.3s;
 }
 .hvr-sweep-to-bottom:hover,
 .hvr-sweep-to-bottom:focus,
 .hvr-sweep-to-bottom:active {
-  color: white;
+  color: #414361;
+  opacity: 0.8;
 }
 .hvr-sweep-to-bottom:hover:before,
 .hvr-sweep-to-bottom:focus:before,
 .hvr-sweep-to-bottom:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
+  transition-duration: 0.4s;
+
+  opacity: 0.8;
 }
 
 /////SLIDER//////////////
